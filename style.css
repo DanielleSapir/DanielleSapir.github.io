@@ -1,4 +1,4 @@
-/* CSS Document */
+CSS Document
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
@@ -317,4 +317,25 @@ td {
 .scroller:before,
 .scroller:after{
   background: #fff;
+}
+
+#personal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#personal > .personal-title {
+  width: 900px;
+}
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+  grid-template-rows: auto;
+}
+
+.video-container > .video-item {
+  grid-column-start: span 6;
 }

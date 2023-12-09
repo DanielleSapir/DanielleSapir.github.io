@@ -328,25 +328,54 @@ td {
 #personal > .personal-title {
   width: 900px;
 }
+
 .video-container {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70vw;
   flex-wrap: wrap;
-  margin-top: 25px;
-  width: 1430px;
 }
 
 .video-container > .video-item {
-  height: 400px;
-  margin: 3px;
+  max-width: fit-content;
+  max-height: 305px;
+  width: 34.5vw;
+  margin-top: 3px;
 }
 
-.grow-wrapper {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
+.video-container > .video-item.portrait {
+  width: 25%;
 }
 
-.grow-wrapper > * {
-  height: 100%;
+
+@media only screen and (max-width: 1200px) {
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    flex-wrap: wrap;
+  }
+
+  .video-container > .video-item {
+    max-width: fit-content;
+    margin-top: 3px;
+    width: 80%;
+    max-height: none;
+  }
+  
+  .video-container > .video-item.portrait {
+    order: 1;
+    width: 50%;
+    max-height: 400px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .video-container > .video-item.portrait {
+    max-width: fit-content;
+    margin-top: 3px;
+    width: 80%;
+  }
 }
